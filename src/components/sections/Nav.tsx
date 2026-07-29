@@ -1,59 +1,43 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
-const LINKS = [
+const NAV_LINKS = [
   { href: "#services", label: "Services" },
+  { href: "#testers", label: "Product Testers" },
   { href: "#why", label: "Why Us" },
-  { href: "#testers", label: "Testers" },
+  { href: "#process", label: "Process" },
+  { href: "#about", label: "About" },
 ];
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-100 transition-all duration-400 ${
-        scrolled
-          ? "bg-cream/70 backdrop-blur-xl border-b border-line/70"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
-      <nav className="max-w-[1240px] mx-auto px-10 h-[72px] flex items-center justify-between gap-8">
-        <a
-          href="#top"
-          className="text-[17px] font-bold tracking-[-0.02em] text-ink"
-        >
-          The Markgent<span className="text-accent">.</span>
-        </a>
-
-        <ul className="hidden md:flex items-center gap-9">
-          {LINKS.map((link) => (
-            <li key={link.href}>
+    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+      <div className="w-full max-w-290 rounded-full border border-white/40 bg-cream/70 backdrop-blur-xl backdrop-saturate-150 shadow-[0_20px_50px_-20px_rgba(6,45,42,0.35)]">
+        <div className="px-6 h-17 flex items-center gap-10">
+          <a href="#top" className="flex items-center gap-2.5 flex-none">
+            <span className="w-7.5 h-7.5 rounded-[9px] bg-ink text-cream flex items-center justify-center font-serif text-[17px] leading-none">
+              M
+            </span>
+            <span className="font-serif text-xl text-ink tracking-[0.01em]">
+              The Markgent<span className="text-faint"> LLC</span>
+            </span>
+          </a>
+          <nav className="hidden md:flex gap-7 ml-auto items-center">
+            {NAV_LINKS.map((link) => (
               <a
+                key={link.href}
                 href={link.href}
                 className="text-[14.5px] text-nav hover:text-ink transition-colors"
               >
                 {link.label}
               </a>
-            </li>
-          ))}
-        </ul>
-
-        <a
-          href="#contact"
-          className="bg-ink text-cream px-5 py-2.5 rounded-full text-[14px] font-medium hover:bg-ink-soft transition-colors"
-        >
-          Get in touch
-        </a>
-      </nav>
+            ))}
+          </nav>
+          <a
+            href="#contact"
+            className="flex-none bg-ink text-cream px-5.5 py-3 rounded-full text-[14.5px] font-medium hover:bg-ink-soft hover:text-white transition-colors"
+          >
+            Get a Free Consultation
+          </a>
+        </div>
+      </div>
     </header>
   );
 }

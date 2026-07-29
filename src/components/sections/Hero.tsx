@@ -17,7 +17,7 @@ export default function Hero() {
     >
       <HeroShaderBackdrop />
 
-      <div className="max-w-[1240px] mx-auto px-10 pt-56 pb-28 flex flex-1 flex-col items-center text-center">
+      <div className="max-w-[1240px] mx-auto px-10 pt-56 pb-18 flex flex-1 flex-col items-center text-center">
         <TextReveal
         as="h1"
         className="text-[34px] sm:text-[44px] lg:text-[72px] leading-[1.22] text-ink max-w-none"

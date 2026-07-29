@@ -61,6 +61,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   --animate-marquee: marquee 26s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 26s linear infinite;
 
   @keyframes marquee {
     from {
@@ -68,6 +69,15 @@
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
     }
   }
 }

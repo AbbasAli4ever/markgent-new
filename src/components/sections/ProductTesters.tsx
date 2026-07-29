@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextReveal from "./TextReveal";
+import { PixelCanvas } from "@/components/ui/pixel-canvas";
 
 const STEPS = [
   {
@@ -25,12 +26,22 @@ export default function ProductTesters() {
   return (
     <section id="testers" className="max-w-[1240px] mx-auto px-10 pt-24">
       <div className="relative overflow-hidden bg-ink rounded-[32px] p-8 md:p-14 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div className="absolute inset-0">
+          <PixelCanvas
+            colors={["#0f7a66", "#0c4a44", "#8fd8c4", "#a9832f"]}
+            gap={8}
+            speed={0.03}
+            variant="glow"
+            className="opacity-90"
+          />
+        </div>
+
         <div
           aria-hidden
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
         />
 
-        <div className="relative">
+        <div className="relative z-10 pointer-events-none">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             <span className="text-[11.5px] tracking-[0.16em] uppercase text-cream/70">
@@ -97,7 +108,7 @@ export default function ProductTesters() {
           </p> */}
         </div>
 
-        <div className="relative grid grid-cols-2 gap-4">
+        <div className="relative z-10 grid grid-cols-2 gap-4 pointer-events-none">
           <div className="col-span-2 rounded-[22px] overflow-hidden ring-1 ring-white/12 shadow-[0_24px_50px_-24px_rgba(0,0,0,0.55)] aspect-[16/10]">
             <Image
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1100&q=80"
