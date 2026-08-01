@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import TextReveal from "./TextReveal";
 
@@ -33,14 +34,13 @@ export default function Footer() {
     <footer className="bg-ink text-cream">
       <div className="max-w-[1240px] mx-auto px-10 pt-17 pb-8.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-11">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="w-7.5 h-7.5 rounded-[9px] bg-cream text-ink flex items-center justify-center font-serif text-[17px] leading-none">
-              M
-            </span>
-            <span className="font-serif text-xl text-paper">
-              The Markgent LLC
-            </span>
-          </div>
+          <Image
+            src="/logo-light.png"
+            alt="The Markgent LLC"
+            width={40}
+            height={40}
+            className="h-9 w-auto"
+          />
           <TextReveal
             as="p"
             className="mt-4 text-[14.5px] leading-[1.62] text-cream/70 max-w-80"

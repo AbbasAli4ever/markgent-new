@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const NAV_LINKS = [
   { href: "#services", label: "Services" },
   { href: "#testers", label: "Product Testers" },
@@ -12,12 +14,14 @@ export default function Nav() {
       <div className="w-full max-w-290 rounded-full border border-white/40 bg-cream/70 backdrop-blur-xl backdrop-saturate-150 shadow-[0_20px_50px_-20px_rgba(6,45,42,0.35)]">
         <div className="px-6 h-17 flex items-center gap-10">
           <a href="#top" className="flex items-center gap-2.5 flex-none">
-            <span className="w-7.5 h-7.5 rounded-[9px] bg-ink text-cream flex items-center justify-center font-serif text-[17px] leading-none">
-              M
-            </span>
-            <span className="font-serif text-xl text-ink tracking-[0.01em]">
-              The Markgent<span className="text-faint"> LLC</span>
-            </span>
+            <Image
+              src="/logo.png"
+              alt="The Markgent LLC"
+              width={40}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
           </a>
           <nav className="hidden md:flex gap-7 ml-auto items-center">
             {NAV_LINKS.map((link) => (
