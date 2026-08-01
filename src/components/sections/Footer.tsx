@@ -1,4 +1,11 @@
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import TextReveal from "./TextReveal";
+
+const SOCIAL_LINKS = [
+  { label: "LinkedIn", href: "#top", Icon: FaLinkedinIn },
+  { label: "Instagram", href: "#top", Icon: FaInstagram },
+  { label: "Facebook", href: "#top", Icon: FaFacebookF },
+];
 
 const SERVICE_LINKS = [
   { href: "#services", label: "Branding" },
@@ -42,13 +49,14 @@ export default function Footer() {
             branding, marketing, content, and customer support services.
           </TextReveal>
           <div className="mt-5.5 flex gap-2.5">
-            {["in", "ig", "fb"].map((label) => (
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
               <a
                 key={label}
-                href="#top"
-                className="w-9 h-9 border border-white/28 rounded-[10px] flex items-center justify-center text-[13px] text-cream hover:bg-white/12 transition-colors"
+                href={href}
+                aria-label={label}
+                className="w-9 h-9 border border-white/28 rounded-[10px] flex items-center justify-center text-cream hover:bg-white/12 transition-colors"
               >
-                {label}
+                <Icon className="w-4 h-4" />
               </a>
             ))}
           </div>
