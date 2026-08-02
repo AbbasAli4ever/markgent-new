@@ -29,7 +29,11 @@ function RenderGate({ active }: { active: boolean }) {
  */
 export default function HeroShaderBackdrop() {
   const hostRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(
+    () =>
+      typeof window === "undefined" ||
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
 
   useEffect(() => {
     const el = hostRef.current;
@@ -39,7 +43,6 @@ export default function HeroShaderBackdrop() {
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
       typeof IntersectionObserver === "undefined"
     ) {
-      setVisible(false);
       return;
     }
 

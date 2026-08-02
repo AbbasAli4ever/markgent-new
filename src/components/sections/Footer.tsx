@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import TextReveal from "./TextReveal";
 
@@ -9,18 +10,18 @@ const SOCIAL_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { href: "#services", label: "Branding" },
-  { href: "#services", label: "Social Media Management" },
-  { href: "#testers", label: "Product Tester Program" },
-  { href: "#services", label: "Website Design" },
-  { href: "#services", label: "Content Writing" },
-  { href: "#services", label: "Amazon PPC Management" },
+  { href: "/#services", label: "Branding" },
+  { href: "/#services", label: "Social Media Management" },
+  { href: "/#testers", label: "Product Tester Program" },
+  { href: "/#services", label: "Website Design" },
+  { href: "/#services", label: "Content Writing" },
+  { href: "/#services", label: "Amazon PPC Management" },
 ];
 
 const COMPANY_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#process", label: "Our Process" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/#process", label: "Our Process" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const LEGAL_LINKS = [
@@ -50,14 +51,14 @@ export default function Footer() {
           </TextReveal>
           <div className="mt-5.5 flex gap-2.5">
             {SOCIAL_LINKS.map(({ label, href, Icon }) => (
-              <a
+              <Link
                 key={label}
                 href={href}
                 aria-label={label}
                 className="w-9 h-9 border border-white/28 rounded-[10px] flex items-center justify-center text-cream hover:bg-white/12 transition-colors"
               >
                 <Icon className="w-4 h-4" />
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -70,7 +71,7 @@ export default function Footer() {
           </TextReveal>
           <div className="mt-4 grid gap-2.5 text-[14.5px]">
             {SERVICE_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-cream/82 hover:text-white transition-colors"
@@ -78,7 +79,7 @@ export default function Footer() {
                 <TextReveal as="span" className="inline-block">
                   {link.label}
                 </TextReveal>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
