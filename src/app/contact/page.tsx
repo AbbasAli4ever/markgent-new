@@ -24,18 +24,18 @@ export default function ContactPage() {
     <>
       <Nav />
       <main className="flex-1">
-        <section id="top" className="relative isolate overflow-hidden pt-36 sm:pt-44">
+        <section id="top" className="relative isolate overflow-hidden pt-28 sm:pt-36 xl:pt-44">
           <HeroShaderBackdrop />
-          <div className="mx-auto max-w-[1240px] px-5 pb-20 sm:px-8 lg:px-10 lg:pb-28">
-            <div className="grid items-start gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
+          <div className="mx-auto max-w-[1240px] px-5 pb-16 sm:px-8 sm:pb-20 xl:px-10 xl:pb-28">
+            <div className="grid items-start gap-10 xl:grid-cols-[0.82fr_1.18fr] xl:gap-16">
               <div className="lg:pb-8">
                 <div className="text-[12.5px] uppercase tracking-[0.16em] text-faint">Contact us</div>
-                <TextReveal as="h1" className="mt-4 text-[46px] leading-[1.05] text-ink sm:text-[60px] lg:text-[70px]">Let&apos;s talk about what your store needs next</TextReveal>
+                <TextReveal as="h1" className="mt-4 text-[38px] leading-[1.05] text-ink sm:text-[52px] xl:text-[70px]">Let&apos;s talk about what your store needs next</TextReveal>
                 <TextReveal as="p" delay={0.14} className="mt-6 max-w-[520px] text-[17px] leading-[1.7] text-body">
                   Share where your brand is today and what you want to improve. We&apos;ll respond with a practical next step, not a generic sales pitch.
                 </TextReveal>
 
-                <div className="mt-9 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="mt-9 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
                   {CONTACT_DETAILS.map(({ label, value, href, Icon }) => {
                     const content = (
                       <>
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="lg:pt-[35px]">
+              <div className="xl:pt-[35px]">
                 <ContactForm />
               </div>
             </div>

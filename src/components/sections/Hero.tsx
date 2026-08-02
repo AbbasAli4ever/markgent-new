@@ -17,14 +17,14 @@ export default function Hero() {
     >
       <HeroShaderBackdrop />
 
-      <div className="max-w-[1240px] mx-auto px-10 pt-56 pb-18 flex flex-1 flex-col items-center text-center">
+      <div className="mx-auto flex w-full max-w-[1240px] flex-1 flex-col items-center px-5 pb-12 pt-32 text-center sm:px-8 sm:pt-40 md:pt-44 xl:px-10 xl:pt-56 xl:pb-18">
         <TextReveal
         as="h1"
-        className="text-[34px] sm:text-[44px] lg:text-[72px] leading-[1.22] text-ink max-w-none"
+        className="max-w-[900px] text-[36px] leading-[1.12] text-ink sm:text-[48px] md:text-[58px] xl:max-w-none xl:text-[72px] xl:leading-[1.22]"
       >
-        <span className="whitespace-nowrap">Helping E&#8209;commerce</span>
+        <span className="xl:whitespace-nowrap">Helping E&#8209;commerce</span>
         <br />
-        <span className="whitespace-nowrap">
+        <span className="xl:whitespace-nowrap">
           Brands Grow <span className="text-ink-soft">Smarter</span>
         </span>
       </TextReveal>
@@ -32,29 +32,29 @@ export default function Hero() {
       <TextReveal
         as="p"
         delay={0.2}
-        className="mt-6 text-lg leading-[1.62] text-body max-w-[560px]"
+        className="mt-5 max-w-[560px] text-[15px] leading-[1.65] text-body sm:text-base xl:mt-6 xl:text-lg xl:leading-[1.62]"
       >
         The Markgent LLC provides branding, marketing, content creation, and
         customer support solutions that help businesses grow across Amazon,
         Etsy, Walmart, Shopify, and other e-commerce platforms.
       </TextReveal>
 
-      <div className="mt-9 flex gap-3.5 flex-wrap justify-center">
+      <div className="mt-7 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap xl:mt-9 xl:gap-3.5">
         <a
           href="#contact"
-          className="bg-ink text-cream px-8 py-[17px] rounded-full text-base font-medium hover:bg-ink-soft hover:text-white transition-colors"
+          className="rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-cream transition-colors hover:bg-ink-soft hover:text-white sm:px-8 sm:py-[17px] sm:text-base"
         >
           Get a Free Consultation
         </a>
         <a
           href="#contact"
-          className="border border-ink text-ink px-8 py-[17px] rounded-full text-base font-medium bg-transparent hover:bg-cream-card transition-colors"
+          className="rounded-full border border-ink bg-transparent px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-cream-card sm:px-8 sm:py-[17px] sm:text-base"
         >
           Contact Us
         </a>
       </div>
 
-      <div className="mt-7 inline-flex items-center gap-2.5 text-[13px] text-nav tracking-[0.02em]">
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-[11px] tracking-[0.02em] text-nav sm:text-[13px] xl:mt-7 xl:gap-2.5">
         <div className="flex -space-x-2">
           {AVATARS.map((src) => (
             <span
@@ -81,7 +81,7 @@ export default function Hero() {
         </TextReveal>
       </div>
 
-        <div className="mt-16 w-full">
+        <div className="mt-10 w-full overflow-hidden xl:mt-16">
           <div className="text-[12.5px] tracking-[0.14em] uppercase text-faint mb-6">
             We work across
           </div>

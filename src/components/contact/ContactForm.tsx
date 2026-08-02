@@ -50,10 +50,10 @@ export default function ContactForm() {
   };
 
   const fieldClass =
-    "mt-2 w-full rounded-[12px] border border-line-strong bg-cream/45 px-4 py-3.5 text-[15px] text-ink outline-none transition focus:border-accent focus:bg-paper focus:ring-3 focus:ring-accent/10";
+    "mt-2 min-h-11 w-full min-w-0 rounded-[12px] border border-line-strong bg-cream/45 px-4 py-3.5 text-[15px] text-ink outline-none transition focus:border-accent focus:bg-paper focus:ring-3 focus:ring-accent/10";
 
   return (
-    <form onSubmit={submit} className="rounded-[28px] border border-line bg-paper p-6 shadow-[0_28px_70px_-42px_rgba(6,45,42,0.38)] sm:p-8 lg:p-10">
+    <form onSubmit={submit} className="min-w-0 rounded-[22px] border border-line bg-paper p-5 shadow-[0_28px_70px_-42px_rgba(6,45,42,0.38)] sm:p-8 xl:rounded-[28px] xl:p-10">
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-medium text-ink">
           Name <span className="text-accent">*</span>

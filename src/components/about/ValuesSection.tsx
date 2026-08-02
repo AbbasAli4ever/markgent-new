@@ -54,11 +54,11 @@ export default function ValuesSection() {
 
   return (
     <section ref={sectionRef} id="values" className="py-20 md:py-28">
-      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-10">
-        <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
-          <div className="lg:sticky lg:top-32 lg:self-start">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 xl:px-10">
+        <div className="grid gap-10 xl:grid-cols-[0.78fr_1.22fr] xl:gap-20">
+          <div className="xl:sticky xl:top-32 xl:self-start">
             <div className="text-[12.5px] uppercase tracking-[0.16em] text-faint">Our values</div>
-            <TextReveal as="h2" className="mt-4 text-[42px] leading-[1.08] text-ink sm:text-[54px]">Principles that show up in the work</TextReveal>
+            <TextReveal as="h2" className="mt-4 text-[36px] leading-[1.08] text-ink sm:text-[48px] xl:text-[54px]">Principles that show up in the work</TextReveal>
             <TextReveal as="p" className="mt-5 max-w-[430px] text-base leading-[1.7] text-body">Values only matter when clients can feel them in communication, decisions, and delivery.</TextReveal>
 
             <div className="relative mt-9 min-h-[230px] overflow-hidden rounded-[24px] bg-ink p-7 text-paper sm:p-8">
@@ -90,10 +90,10 @@ export default function ValuesSection() {
                   onMouseEnter={() => setActive(index)}
                   onFocus={() => setActive(index)}
                   onClick={() => setActive(index)}
-                  className="group flex w-full items-center gap-5 border-b border-line-strong py-7 text-left outline-none sm:py-8"
+                  className="group flex min-w-0 w-full items-center gap-3 border-b border-line-strong py-5 text-left outline-none sm:gap-5 sm:py-8"
                 >
                   <span className={`text-sm transition-colors ${isActive ? "text-accent" : "text-faint"}`}>{String(index + 1).padStart(2, "0")}</span>
-                  <span className={`flex-1 text-[28px] font-semibold transition-all sm:text-[36px] ${isActive ? "translate-x-2 text-ink" : "text-muted group-hover:text-ink"}`}>{item.name}</span>
+                  <span className={`min-w-0 flex-1 text-[22px] font-semibold transition-all sm:text-[32px] xl:text-[36px] ${isActive ? "translate-x-1 text-ink sm:translate-x-2" : "text-muted group-hover:text-ink"}`}>{item.name}</span>
                   <span aria-hidden className={`flex h-10 w-10 items-center justify-center rounded-full border text-xl transition-all ${isActive ? "rotate-45 border-ink bg-ink text-paper" : "border-line-strong text-ink"}`}>+</span>
                 </button>
               );

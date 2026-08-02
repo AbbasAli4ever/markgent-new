@@ -26,7 +26,7 @@ export default function PurposeSection() {
 
     const mm = gsap.matchMedia();
     const ctx = gsap.context(() => {
-      mm.add("(min-width: 1024px)", () => {
+      mm.add("(min-width: 1280px)", () => {
         gsap.fromTo(
           missionRef.current,
           { x: -70, rotateY: 5 },
@@ -48,18 +48,18 @@ export default function PurposeSection() {
 
   return (
     <section ref={sectionRef} id="purpose" className="py-20 md:py-28">
-      <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-[1400px] px-5 sm:px-8 xl:px-10">
         <div className="mx-auto mb-12 max-w-[760px] text-center md:mb-16">
           <div className="text-[12.5px] uppercase tracking-[0.16em] text-faint">Purpose with direction</div>
-          <TextReveal as="h2" className="mt-4 text-[40px] leading-[1.08] text-ink sm:text-[52px] lg:text-[60px]">
+          <TextReveal as="h2" className="mt-4 text-[36px] leading-[1.08] text-ink sm:text-[48px] xl:text-[60px]">
             Where we are going, and why the work matters
           </TextReveal>
         </div>
 
-        <div className="grid gap-5 [perspective:1200px] lg:grid-cols-2">
+        <div className="grid gap-5 [perspective:1200px] xl:grid-cols-2">
           <div
             ref={missionRef}
-            className="relative flex min-h-[620px] flex-col overflow-hidden rounded-[30px] bg-ink p-7 text-paper sm:p-10 lg:p-12"
+            className="relative flex min-h-[520px] flex-col overflow-hidden rounded-[24px] bg-ink p-6 text-paper sm:min-h-[560px] sm:p-10 xl:min-h-[620px] xl:rounded-[30px] xl:p-12"
           >
             <Image
               src="/star-light.png"
@@ -73,7 +73,7 @@ export default function PurposeSection() {
               <div className="text-[13px] font-medium uppercase tracking-[0.2em] text-cream/55">Our Mission</div>
               <TextReveal
                 as="h3"
-                className="mt-8 max-w-[660px] text-[36px] font-medium leading-[1.12] text-paper [font-family:Georgia,serif] sm:text-[48px] lg:text-[52px]"
+                className="mt-8 max-w-[660px] text-[32px] font-medium leading-[1.12] text-paper [font-family:Georgia,serif] sm:text-[42px] xl:text-[52px]"
               >
                 Make professional-grade marketing reachable for independent sellers
               </TextReveal>
@@ -92,7 +92,7 @@ export default function PurposeSection() {
 
           <div
             ref={visionRef}
-            className="relative flex min-h-[620px] flex-col overflow-hidden rounded-[30px] border border-line bg-paper p-7 text-ink sm:p-10 lg:p-12"
+            className="relative flex min-h-[520px] flex-col overflow-hidden rounded-[24px] border border-line bg-paper p-6 text-ink sm:min-h-[560px] sm:p-10 xl:min-h-[620px] xl:rounded-[30px] xl:p-12"
           >
             <Image
               src="/star-green.png"
@@ -106,7 +106,7 @@ export default function PurposeSection() {
               <div className="text-[13px] font-medium uppercase tracking-[0.2em] text-faint">Our Vision</div>
               <TextReveal
                 as="h3"
-                className="mt-8 max-w-[660px] text-[36px] font-medium leading-[1.12] text-ink [font-family:Georgia,serif] sm:text-[48px] lg:text-[52px]"
+                className="mt-8 max-w-[660px] text-[32px] font-medium leading-[1.12] text-ink [font-family:Georgia,serif] sm:text-[42px] xl:text-[52px]"
               >
                 Become the growth partner brands keep as they scale
               </TextReveal>

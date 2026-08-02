@@ -51,14 +51,14 @@ export default function AboutHero() {
     >
       <HeroShaderBackdrop />
 
-      <div className="relative mx-auto flex w-full max-w-[1240px] flex-1 flex-col px-5 pb-10 pt-40 sm:px-8 md:pt-48 lg:px-10">
+      <div className="relative mx-auto flex w-full max-w-[1240px] flex-1 flex-col px-5 pb-8 pt-28 sm:px-8 sm:pt-36 md:pt-40 xl:px-10 xl:pb-10 xl:pt-48">
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <div className="text-[12.5px] uppercase tracking-[0.16em] text-faint">
             About The Markgent LLC
           </div>
           <TextReveal
             as="h1"
-            className="mt-4 max-w-[960px] text-[44px] leading-[1.08] text-ink sm:text-[60px] lg:text-[76px]"
+            className="mt-4 max-w-[960px] text-[38px] leading-[1.08] text-ink sm:text-[52px] md:text-[60px] xl:text-[76px]"
           >
             The growth team behind ambitious e-commerce brands
           </TextReveal>

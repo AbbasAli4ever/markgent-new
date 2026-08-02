@@ -23,13 +23,13 @@ export default function ServicesPage() {
           className="relative isolate flex min-h-screen w-full flex-col overflow-hidden"
         >
           <HeroShaderBackdrop />
-          <div className="mx-auto flex w-full max-w-[1240px] flex-1 flex-col items-center justify-center px-5 pb-20 pt-44 text-center sm:px-8 md:pt-52 lg:px-10">
+          <div className="mx-auto flex w-full max-w-[1240px] flex-1 flex-col items-center justify-center px-5 pb-14 pt-32 text-center sm:px-8 sm:pt-40 md:pt-44 xl:px-10 xl:pb-20 xl:pt-52">
             <div className="text-[12.5px] uppercase tracking-[0.16em] text-faint">
               Our Services
             </div>
             <TextReveal
               as="h1"
-              className="mt-4 max-w-[980px] text-[44px] leading-[1.08] text-ink sm:text-[60px] lg:text-[76px]"
+              className="mt-4 max-w-[980px] text-[38px] leading-[1.08] text-ink sm:text-[52px] md:text-[60px] xl:text-[76px]"
             >
               Everything your store needs, handled by one team
             </TextReveal>

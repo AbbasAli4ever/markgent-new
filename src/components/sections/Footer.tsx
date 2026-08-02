@@ -33,7 +33,7 @@ const LEGAL_LINKS = [
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream">
-      <div className="max-w-[1240px] mx-auto px-10 pt-17 pb-8.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-11">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-10 px-5 pb-8 pt-14 sm:grid-cols-2 sm:px-8 xl:grid-cols-[1.4fr_1fr_1fr_1fr] xl:gap-11 xl:px-10 xl:pt-17 xl:pb-8.5">
         <div>
           <Image
             src="/logo-light.png"
@@ -129,8 +129,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto px-10 pb-10">
-        <div className="border-t border-white/18 pt-5.5 flex justify-between gap-5 flex-wrap text-[13px] text-cream/60">
+      <div className="mx-auto max-w-[1240px] px-5 pb-8 sm:px-8 xl:px-10 xl:pb-10">
+        <div className="flex flex-col gap-2 border-t border-white/18 pt-5.5 text-[12px] text-cream/60 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-5 xl:text-[13px]">
           <span>Copyright © The Markgent LLC. All rights reserved.</span>
           <span>Registered in the United States</span>
         </div>

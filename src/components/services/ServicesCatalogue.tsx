@@ -35,7 +35,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
         ease: "power3.out",
         scrollTrigger: { trigger: card, start: "top 82%", once: true },
       });
-      gsap.matchMedia().add("(min-width: 768px)", () => {
+      gsap.matchMedia().add("(min-width: 1280px)", () => {
         gsap.fromTo(
           imageInnerRef.current,
           { yPercent: -7 },
@@ -57,16 +57,16 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       id={service.slug}
       data-service-card
       data-service-index={index}
-      className={`scroll-mt-36 overflow-hidden rounded-[28px] border p-5 sm:p-7 lg:min-h-[530px] lg:p-9 ${
+      className={`scroll-mt-32 overflow-hidden rounded-[22px] border p-4 sm:p-6 xl:min-h-[530px] xl:scroll-mt-36 xl:rounded-[28px] xl:p-9 ${
         dark ? "border-ink bg-ink text-paper" : "border-line-strong bg-paper text-ink"
       }`}
       style={{ perspective: 1000 }}
     >
-      <div className="grid h-full items-center gap-8 lg:grid-cols-2 lg:gap-10">
+      <div className="grid h-full items-center gap-6 sm:gap-8 xl:grid-cols-2 xl:gap-10">
         <div
           ref={imageRef}
-          className={`relative min-h-[270px] overflow-hidden rounded-[22px] bg-image-bg sm:min-h-[340px] lg:min-h-[420px] ${
-            imageFirst ? "lg:order-1" : "lg:order-2"
+          className={`relative min-h-[230px] overflow-hidden rounded-[18px] bg-image-bg sm:min-h-[340px] xl:min-h-[420px] xl:rounded-[22px] ${
+            imageFirst ? "xl:order-1" : "xl:order-2"
           }`}
         >
           <div ref={imageInnerRef} className="absolute -inset-y-[10%] inset-x-0">
@@ -81,11 +81,11 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           <div aria-hidden className={`absolute inset-0 ${dark ? "bg-ink/12" : "bg-transparent"}`} />
         </div>
 
-        <div className={imageFirst ? "lg:order-2" : "lg:order-1"}>
+        <div className={imageFirst ? "xl:order-2" : "xl:order-1"}>
           <div className={`text-xs uppercase tracking-[0.18em] ${dark ? "text-cream/52" : "text-faint"}`}>
             {String(index + 1).padStart(2, "0")} &nbsp; {service.category}
           </div>
-          <h2 className={`mt-5 text-[36px] leading-[1.06] sm:text-[46px] ${dark ? "text-paper" : "text-ink"}`}>
+          <h2 className={`mt-4 text-[30px] leading-[1.06] sm:text-[40px] xl:mt-5 xl:text-[46px] ${dark ? "text-paper" : "text-ink"}`}>
             {service.name}
           </h2>
           <p className={`mt-6 text-[16px] leading-[1.72] sm:text-[17px] ${dark ? "text-cream/70" : "text-body"}`}>
@@ -145,7 +145,7 @@ export default function ServicesCatalogue() {
         });
       });
 
-      mm.add("(min-width: 1024px)", () => {
+      mm.add("(min-width: 1280px)", () => {
         ScrollTrigger.create({
           trigger: layout,
           start: "top 112px",
@@ -176,6 +176,24 @@ export default function ServicesCatalogue() {
     });
   }, [activeIndex]);
 
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+
+    let secondFrame = 0;
+    const firstFrame = window.requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+      secondFrame = window.requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ block: "start" });
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(firstFrame);
+      window.cancelAnimationFrame(secondFrame);
+    };
+  }, []);
+
   useLayoutEffect(() => {
     const indicator = indicatorRef.current;
     if (!indicator) return;
@@ -189,8 +207,8 @@ export default function ServicesCatalogue() {
   }, [activeIndex]);
 
   return (
-    <section id="service-catalogue" className="scroll-mt-24 mx-auto max-w-[1400px] px-5 pb-8 pt-20 sm:px-8 md:pt-24 lg:px-10">
-      <div className="sticky top-[84px] z-30 -mx-5 mb-6 border-y border-line bg-cream/92 px-5 py-3 backdrop-blur-xl lg:hidden">
+    <section id="service-catalogue" className="mx-auto max-w-[1400px] scroll-mt-20 px-5 pb-8 pt-14 sm:px-8 sm:pt-20 xl:scroll-mt-24 xl:px-10 xl:pt-24">
+      <div className="sticky top-[68px] z-30 -mx-5 mb-6 border-y border-line bg-cream/92 px-5 py-3 backdrop-blur-xl sm:-mx-8 sm:px-8 xl:hidden">
         <nav className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" aria-label="Services">
           {SERVICES.map((service, index) => (
             <a
@@ -208,8 +226,8 @@ export default function ServicesCatalogue() {
         </nav>
       </div>
 
-      <div ref={layoutRef} className="grid items-start gap-8 lg:grid-cols-[330px_minmax(0,1fr)] lg:gap-12">
-        <aside ref={asideRef} className="hidden flex-col lg:flex">
+      <div ref={layoutRef} className="grid items-start gap-8 xl:grid-cols-[330px_minmax(0,1fr)] xl:gap-12">
+        <aside ref={asideRef} className="hidden flex-col xl:flex">
           <div className="text-[12.5px] uppercase tracking-[0.18em] text-faint">All Services</div>
           <nav className="relative mt-6 border-l border-line-strong" aria-label="Services">
             <span
@@ -243,7 +261,7 @@ export default function ServicesCatalogue() {
           </div>
         </aside>
 
-        <div ref={cardsRef} className="grid gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid gap-5 sm:gap-6 xl:gap-8">
           {SERVICES.map((service, index) => (
             <ServiceCard key={service.slug} service={service} index={index} />
           ))}

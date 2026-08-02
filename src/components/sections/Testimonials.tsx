@@ -56,7 +56,7 @@ function TestimonialCard({
   testimonial: (typeof TESTIMONIALS)[number];
 }) {
   return (
-    <div className="w-95 shrink-0 relative overflow-hidden bg-paper border border-line rounded-[20px] p-7 flex flex-col">
+    <div className="relative flex w-[82vw] max-w-95 shrink-0 flex-col overflow-hidden rounded-[20px] border border-line bg-paper p-5 sm:p-7 xl:w-95">
       <div className="flex items-center gap-3.5">
         <Image
           src={testimonial.avatar}
@@ -115,7 +115,7 @@ export default function Testimonials({ show = true }: { show?: boolean }) {
   if (!show) return null;
 
   return (
-    <section className="max-w-[1240px] mx-auto px-10 pt-24">
+    <section className="mx-auto max-w-[1240px] px-5 pt-16 sm:px-8 sm:pt-20 xl:px-10 xl:pt-24">
       <div className="text-[12.5px] tracking-[0.16em] uppercase text-faint">
         Client Feedback
       </div>

@@ -24,8 +24,8 @@ const STEPS = [
 
 export default function ProductTesters() {
   return (
-    <section id="testers" className="max-w-[1240px] mx-auto px-10 pt-24">
-      <div className="relative overflow-hidden bg-ink rounded-[32px] p-8 md:p-14 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+    <section id="testers" className="mx-auto max-w-[1240px] px-5 pt-16 sm:px-8 sm:pt-20 xl:px-10 xl:pt-24">
+      <div className="relative grid grid-cols-1 items-center gap-10 overflow-hidden rounded-[24px] bg-ink p-5 sm:p-8 md:p-10 xl:grid-cols-2 xl:gap-14 xl:rounded-[32px] xl:p-14">
         <div className="absolute inset-0">
           <PixelCanvas
             colors={["#0f7a66", "#0c4a44", "#8fd8c4", "#a9832f"]}
@@ -51,7 +51,7 @@ export default function ProductTesters() {
 
           <TextReveal
             as="h2"
-            className="mt-5 text-[46px] md:text-[52px] leading-[1.08] text-paper"
+            className="mt-5 text-[36px] leading-[1.08] text-paper sm:text-[44px] xl:text-[52px]"
           >
             Genuine feedback from{" "}
             <span className="bg-gradient-to-r from-[#8fd8c4] to-accent bg-clip-text text-transparent">
@@ -108,7 +108,7 @@ export default function ProductTesters() {
           </p> */}
         </div>
 
-        <div className="relative z-10 grid grid-cols-2 gap-4 pointer-events-none">
+        <div className="pointer-events-none relative z-10 grid grid-cols-2 gap-3 sm:gap-4">
           <div className="col-span-2 rounded-[22px] overflow-hidden ring-1 ring-white/12 shadow-[0_24px_50px_-24px_rgba(0,0,0,0.55)] aspect-[16/10]">
             <Image
               src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1100&q=80"

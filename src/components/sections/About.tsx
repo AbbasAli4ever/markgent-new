@@ -11,7 +11,7 @@ const VALUES = [
 
 export default function About() {
   return (
-    <section id="about" className="max-w-[1240px] mx-auto px-10 pt-24">
+    <section id="about" className="mx-auto max-w-[1240px] px-5 pt-16 sm:px-8 sm:pt-20 xl:px-10 xl:pt-24">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4.5">
         <div className="lg:col-span-8 relative overflow-hidden bg-paper border border-line rounded-3xl p-7 md:p-8">
           <div
@@ -24,7 +24,7 @@ export default function About() {
             </div>
             <TextReveal
               as="h2"
-              className="mt-3.5 text-[40px] md:text-[46px] leading-[1.12] text-ink"
+              className="mt-3.5 text-[34px] leading-[1.12] text-ink sm:text-[40px] xl:text-[46px]"
             >
               A focused agency for e-commerce operators
             </TextReveal>

@@ -51,22 +51,22 @@ export default function WhyChooseUs() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="why" className="max-w-[1240px] mx-auto px-10 pt-24">
+    <section id="why" className="mx-auto max-w-[1240px] px-5 pt-16 sm:px-8 sm:pt-20 xl:px-10 xl:pt-24">
       <div className="text-center">
         <div className="text-[12.5px] tracking-[0.16em] uppercase text-faint">
           Why Choose Us
         </div>
         <TextReveal
           as="h2"
-          className="mt-3.5 text-[64px] max-w-[800px] mx-auto leading-[1.08] text-ink"
+          className="mx-auto mt-3.5 max-w-[800px] text-[38px] leading-[1.08] text-ink sm:text-[50px] xl:text-[64px]"
         >
           A partner that behaves like part of your team
         </TextReveal>
       </div>
 
-      <div className="mt-14 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-stretch">
+      <div className="mt-10 grid grid-cols-1 items-stretch gap-8 sm:mt-12 xl:mt-14 xl:grid-cols-[0.9fr_1.1fr] xl:gap-16">
         {/* Image column — cross-fades with the hovered reason */}
-        <div className="relative rounded-3xl overflow-hidden bg-image-bg min-h-[420px] lg:min-h-full ring-1 ring-line shadow-[0_30px_60px_-30px_rgba(6,45,42,0.35)]">
+        <div className="relative min-h-[300px] overflow-hidden rounded-3xl bg-image-bg ring-1 ring-line shadow-[0_30px_60px_-30px_rgba(6,45,42,0.35)] sm:min-h-[380px] xl:min-h-full">
           {REASONS.map((reason, i) => (
             <Image
               key={reason.number}
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
             {/* Curved arrows fanning from a shared origin to each row */}
             <svg
               aria-hidden
-              className="pointer-events-none absolute inset-0 h-full w-full overflow-visible"
+              className="pointer-events-none absolute inset-0 hidden h-full w-full overflow-visible xl:block"
             >
               <defs>
                 <marker
@@ -175,18 +175,18 @@ export default function WhyChooseUs() {
                   onMouseEnter={() => setActive(i)}
                   onFocus={() => setActive(i)}
                   aria-current={isActive}
-                  className={`group relative flex gap-5 rounded-full px-6 py-5 text-left outline-none transition-all duration-400 ease-out ${
+                  className={`group relative ml-0 flex w-full gap-4 rounded-[18px] px-4 py-4 text-left outline-none transition-all duration-400 ease-out sm:gap-5 sm:px-6 sm:py-5 xl:ml-[var(--arc)] xl:rounded-full xl:[transform:var(--why-transform)] ${
                     isActive
                       ? "border border-white/60 bg-white/50 backdrop-blur-xl backdrop-saturate-150 shadow-[0_18px_40px_-18px_rgba(6,45,42,0.28)]"
                       : "border border-transparent bg-transparent"
                   }`}
                   style={{
                     transformStyle: "preserve-3d",
-                    marginLeft: `${arc}px`,
-                    transform: isActive
+                    "--arc": `${arc}px`,
+                    "--why-transform": isActive
                       ? "rotateX(-3deg) translateZ(18px) scale(1.025)"
                       : "rotateX(0deg) translateZ(0)",
-                  }}
+                  } as React.CSSProperties}
                 >
                   <span
                     className={`font-serif text-base w-7 flex-none pt-0.5 transition-colors duration-300 ${

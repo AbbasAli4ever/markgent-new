@@ -9,8 +9,8 @@ const HIGHLIGHTS = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="max-w-[1240px] mx-auto px-10 pt-24 pb-24">
-      <div className="relative overflow-hidden rounded-[32px] bg-ink px-8 py-14 md:px-16 md:py-20 text-center">
+    <section id="contact" className="mx-auto max-w-[1240px] px-5 pb-16 pt-16 sm:px-8 sm:pb-20 sm:pt-20 xl:px-10 xl:pb-24 xl:pt-24">
+      <div className="relative overflow-hidden rounded-[24px] bg-ink px-5 py-12 text-center sm:px-8 sm:py-14 xl:rounded-[32px] xl:px-16 xl:py-20">
         <div className="absolute inset-0">
           <PixelCanvas
             colors={["#0f7a66", "#0c4a44", "#8fd8c4", "#a9832f"]}
@@ -33,7 +33,7 @@ export default function Contact() {
 
           <TextReveal
             as="h2"
-            className="mt-3.5 text-[42px] md:text-[56px] leading-[1.08] text-paper max-w-[720px] mx-auto"
+            className="mx-auto mt-3.5 max-w-[720px] text-[34px] leading-[1.08] text-paper sm:text-[44px] xl:text-[56px]"
           >
             Tell us what you sell — we&apos;ll tell you what we&apos;d do
           </TextReveal>
@@ -47,16 +47,16 @@ export default function Contact() {
             come back with a plain-language plan and a quote.
           </TextReveal>
 
-          <div className="mt-9 flex gap-3.5 flex-wrap justify-center">
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap xl:mt-9 xl:gap-3.5">
             <a
               href="mailto:hello@themarkgent.com"
-              className="pointer-events-auto bg-paper text-ink px-8 py-[17px] rounded-full text-base font-medium hover:bg-white transition-colors"
+              className="pointer-events-auto rounded-full bg-paper px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-white sm:px-8 sm:py-[17px] sm:text-base"
             >
               Book a Free Consultation
             </a>
             <a
               href="mailto:hello@themarkgent.com"
-              className="pointer-events-auto border border-white/25 text-paper px-8 py-[17px] rounded-full text-base font-medium hover:bg-white/10 transition-colors"
+              className="pointer-events-auto break-all rounded-full border border-white/25 px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-white/10 sm:px-8 sm:py-[17px] sm:text-base"
             >
               hello@themarkgent.com
             </a>

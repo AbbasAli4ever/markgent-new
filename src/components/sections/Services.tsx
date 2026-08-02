@@ -1,4 +1,5 @@
 import TextReveal from "./TextReveal";
+import Image from "next/image";
 import {
   OrbitCardStack,
   type OrbitStackItem,
@@ -73,7 +74,7 @@ const SERVICES: OrbitStackItem[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="max-w-[1240px] mx-auto px-10 pt-24 pb-6">
+    <section id="services" className="mx-auto max-w-[1240px] px-5 pb-6 pt-16 sm:px-8 sm:pt-20 xl:px-10 xl:pt-24">
       <div className="flex items-end justify-between gap-10 flex-wrap">
         <div className="max-w-[620px]">
           <div className="text-[12.5px] tracking-[0.16em] uppercase text-faint">
@@ -81,7 +82,7 @@ export default function Services() {
           </div>
           <TextReveal
             as="h2"
-            className="mt-3.5 text-[56px] leading-[1.08] text-ink"
+            className="mt-3.5 text-[38px] leading-[1.08] text-ink sm:text-[48px] xl:text-[56px]"
           >
             Everything your store needs, handled by one team
           </TextReveal>
@@ -95,7 +96,20 @@ export default function Services() {
         </TextReveal>
       </div>
 
-      <div className="-mt-12 min-h-160 w-full">
+      <div className="-mx-5 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-6 [scrollbar-width:none] sm:-mx-8 sm:px-8 xl:hidden [&::-webkit-scrollbar]:hidden">
+        {SERVICES.map((service) => (
+          <article key={service.name} className="flex w-[min(84vw,340px)] flex-none snap-center flex-col rounded-[22px] border border-line bg-paper p-4 shadow-[0_12px_35px_-24px_rgba(6,45,42,0.32)]">
+            <div className="relative flex aspect-[1.45] items-center justify-center overflow-hidden rounded-[16px] bg-cream-card/60">
+              <Image src={service.icon!} alt="" width={96} height={96} className="h-20 w-20 object-contain" />
+            </div>
+            <div className="mt-5 text-xs uppercase tracking-[0.14em] text-faint">{service.role}</div>
+            <h3 className="mt-2 text-xl text-ink">{service.name}</h3>
+            <p className="mt-3 line-clamp-5 text-sm leading-[1.6] text-body">{service.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <div className="-mt-12 hidden min-h-160 w-full xl:block">
         <OrbitCardStack
           items={SERVICES}
           defaultActiveIndex={4}
