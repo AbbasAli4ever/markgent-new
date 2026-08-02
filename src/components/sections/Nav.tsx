@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "/#services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/#testers", label: "Product Testers" },
   { href: "/#why", label: "Why Us" },
   { href: "/#process", label: "Process" },
@@ -36,7 +36,7 @@ export default function Nav() {
             ))}
           </nav>
           <Link
-            href="/#contact"
+            href="/contact"
             className="flex-none bg-ink text-cream px-5.5 py-3 rounded-full text-[14.5px] font-medium hover:bg-ink-soft hover:text-white transition-colors"
           >
             Get a Free Consultation

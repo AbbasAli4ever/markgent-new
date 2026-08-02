@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(true);
@@ -11,8 +12,8 @@ export default function CookieBanner() {
     <div className="fixed left-6 right-6 bottom-6 z-60 flex justify-center pointer-events-none">
       <div className="pointer-events-auto max-w-[720px] w-full bg-paper border border-line-strong rounded-2xl shadow-[0_20px_50px_-20px_rgba(6,45,42,0.4)] px-5 py-4.5 flex items-center gap-4.5 flex-wrap">
         <p className="text-sm leading-[1.55] text-body flex-1 min-w-[320px]">
-          We use cookies to understand site traffic and improve your
-          experience. See our Privacy Policy for details.
+          This site uses essential technologies to deliver the experience. See
+          our <Link href="/privacy-policy" className="font-semibold text-ink underline underline-offset-3">Privacy Policy</Link> for details.
         </p>
         <div className="flex gap-2.5">
           <button

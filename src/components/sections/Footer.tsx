@@ -10,24 +10,24 @@ const SOCIAL_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { href: "/#services", label: "Branding" },
-  { href: "/#services", label: "Social Media Management" },
-  { href: "/#testers", label: "Product Tester Program" },
-  { href: "/#services", label: "Website Design" },
-  { href: "/#services", label: "Content Writing" },
-  { href: "/#services", label: "Amazon PPC Management" },
+  { href: "/services#branding", label: "Branding" },
+  { href: "/services#social-media-management", label: "Social Media Management" },
+  { href: "/services#product-tester-program", label: "Product Tester Program" },
+  { href: "/services#website-design", label: "Website Design" },
+  { href: "/services#content-writing", label: "Content Writing" },
+  { href: "/services#amazon-ppc-management", label: "Amazon PPC Management" },
 ];
 
 const COMPANY_LINKS = [
   { href: "/about", label: "About" },
   { href: "/#process", label: "Our Process" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const LEGAL_LINKS = [
-  { href: "#top", label: "Privacy Policy" },
-  { href: "#top", label: "Terms & Conditions" },
-  { href: "#top", label: "Refund Policy" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-and-conditions", label: "Terms & Conditions" },
+  { href: "/refund-policy", label: "Refund Policy" },
 ];
 
 export default function Footer() {
@@ -92,7 +92,7 @@ export default function Footer() {
           </TextReveal>
           <div className="mt-4 grid gap-2.5 text-[14.5px]">
             {COMPANY_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-cream/82 hover:text-white transition-colors"
@@ -100,7 +100,7 @@ export default function Footer() {
                 <TextReveal as="span" className="inline-block">
                   {link.label}
                 </TextReveal>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Footer() {
           </TextReveal>
           <div className="mt-4 grid gap-2.5 text-[14.5px]">
             {LEGAL_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-cream/82 hover:text-white transition-colors"
@@ -121,7 +121,7 @@ export default function Footer() {
                 <TextReveal as="span" className="inline-block">
                   {link.label}
                 </TextReveal>
-              </a>
+              </Link>
             ))}
           </div>
           <div className="mt-4.5 border border-white/28 rounded-[10px] px-3 py-2.5 text-[12.5px] leading-[1.45] text-cream/70">

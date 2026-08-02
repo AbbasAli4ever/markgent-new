@@ -102,9 +102,9 @@ export default function Process() {
     <section
       ref={sectionRef}
       id="process"
-      className="mt-24 bg-ink text-cream overflow-hidden"
+      className="mt-24 min-h-screen min-h-[100svh] bg-ink text-cream overflow-hidden"
     >
-      <div className="max-w-[1240px] mx-auto px-10 py-22">
+      <div className="mx-auto flex min-h-screen min-h-[100svh] max-w-[1240px] flex-col px-10 py-22">
         <div className="flex items-end justify-between gap-10 flex-wrap">
           <div ref={headingRef} className="max-w-[600px]">
             <div className="text-[12.5px] tracking-[0.16em] uppercase text-cream/55">
@@ -123,7 +123,7 @@ export default function Process() {
           </p>
         </div>
 
-        <div className="mt-24 hidden lg:grid grid-cols-5 items-center py-36">
+        <div className="mt-24 hidden flex-1 lg:grid grid-cols-5 items-center py-24">
           {STEPS.map((step, i) => {
             const isBelow = i % 2 === 0;
             return (
