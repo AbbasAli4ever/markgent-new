@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { href: "/#why", label: "Why Us" },
   { href: "/#process", label: "Process" },
   { href: "/about", label: "About" },
+  { href: "/blogs", label: "Blogs" },
 ];
 
 export default function Nav() {
