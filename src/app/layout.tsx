@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/" },
+  icons: {
+    icon: { url: "/fav.png", type: "image/png" },
+    apple: { url: "/fav.png", type: "image/png" },
+  },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
