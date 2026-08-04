@@ -7,10 +7,10 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const NAV_LINKS = [
   { href: "/services", label: "Services" },
-  { href: "/#testers", label: "Product Testers" },
-  { href: "/#why", label: "Why Us" },
-  { href: "/#process", label: "Process" },
-  { href: "/about", label: "About" },
+  // { href: "/#testers", label: "Product Testers" },
+  // { href: "/#why", label: "Why Us" },
+  // { href: "/#process", label: "Process" },
+  { href: "/about", label: "About Us" },
   { href: "/blogs", label: "Blogs" },
 ];
 

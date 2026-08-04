@@ -4,9 +4,9 @@ import LogoMarquee from "./LogoMarquee";
 import HeroShaderBackdrop from "./HeroShaderBackdrop";
 
 const AVATARS = [
-  "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=80&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80",
+  "https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?q=80&w=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=80&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1546961329-78bef0414d7c?q=80&w=80&auto=format&fit=crop",
 ];
 
 export default function Hero() {
