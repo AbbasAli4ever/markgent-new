@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import LegalDocument, { type LegalSection } from "@/components/legal/LegalDocument";
+import Nav from "@/components/sections/Nav";
+import Footer from "@/components/sections/Footer";
+import CookieBanner from "@/components/sections/CookieBanner";
+
+export const metadata: Metadata = { title: "Cookie Policy | The Markgent LLC", description: "How The Markgent LLC uses cookies and similar technologies, the categories involved, and how to manage them in your browser." };
+
+const sections: LegalSection[] = [
+  { id: "what-are-cookies", title: "What are cookies?", content: <><p>This Cookie Policy explains how The Markgent LLC uses cookies and similar technologies when you visit our website.</p><p>Cookies are small text files stored on your device when you visit a website. They help improve your browsing experience by remembering your preferences and providing website functionality.</p></> },
+  { id: "how-we-use-cookies", title: "How we use cookies", content: <><p>We use cookies to:</p><ul className="list-disc space-y-2 pl-5"><li>Ensure the website functions properly.</li><li>Improve website performance and user experience.</li><li>Analyze website traffic and visitor behavior.</li><li>Remember user preferences where applicable.</li><li>Enhance the security of our website.</li></ul></> },
+  { id: "types-of-cookies", title: "Types of cookies we use", content: <><p><strong className="font-semibold text-ink">Essential cookies.</strong> These cookies are necessary for the website to operate correctly and cannot be disabled. This includes the local record of your cookie banner choice, which is stored on your own device so the notice does not reappear on every page.</p><p><strong className="font-semibold text-ink">Analytics cookies.</strong> These cookies help us understand how visitors interact with our website so we can improve our services.</p><p><strong className="font-semibold text-ink">Functional cookies.</strong> These cookies remember your preferences and provide a more personalized browsing experience.</p></> },
+  { id: "third-party-cookies", title: "Third-party cookies", content: <><p>Our website may use third-party services such as:</p><ul className="list-disc space-y-2 pl-5"><li>Google Analytics</li><li>Google reCAPTCHA</li><li>Embedded content or social media integrations</li></ul><p>These providers may place cookies on your device in accordance with their own privacy policies. Where such technologies are introduced, this policy and any consent controls will be updated before they are used, to the extent required by applicable law.</p></> },
+  { id: "managing-cookies", title: "Managing cookies", content: <><p>Most web browsers allow you to:</p><ul className="list-disc space-y-2 pl-5"><li>Accept or reject cookies.</li><li>Delete stored cookies.</li><li>Block certain categories of cookies.</li></ul><p>Please note that disabling cookies may affect some features of our website. You can also clear your browser&apos;s stored site data for this website to reset the cookie banner choice recorded on your device.</p></> },
+  { id: "changes", title: "Changes to this Cookie Policy", content: <p>We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated effective date.</p> },
+  { id: "contact", title: "Contact us", content: <><p>If you have any questions regarding this Cookie Policy, please contact:</p><p><strong className="font-semibold text-ink">The Markgent LLC</strong><br />Email: <a className="font-semibold text-ink underline underline-offset-4" href="mailto:hello@themarkgent.com">hello@themarkgent.com</a></p><p>You may also want to read our <Link href="/privacy-policy" className="font-semibold text-ink underline underline-offset-4">Privacy Policy</Link>.</p></> },
+];
+
+export default function CookiePolicyPage() { return <><Nav /><LegalDocument eyebrow="Legal" title="Cookie Policy" summary="How The Markgent LLC uses cookies and similar technologies when you visit our website, and how you can manage them." sections={sections} /><Footer /><CookieBanner /></>; }

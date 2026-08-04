@@ -15,6 +15,8 @@ const SERVICE_LINKS = [
   { href: "/services#product-tester-program", label: "Product Tester Program" },
   { href: "/services#website-design", label: "Website Design" },
   { href: "/services#content-writing", label: "Content Writing" },
+  { href: "/services#product-photography-editing", label: "Product Photography & Editing" },
+  { href: "/services#customer-feedback-management", label: "Customer Feedback Management" },
   { href: "/services#amazon-ppc-management", label: "Amazon PPC Management" },
 ];
 
@@ -27,8 +29,10 @@ const COMPANY_LINKS = [
 
 const LEGAL_LINKS = [
   { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
   { href: "/terms-and-conditions", label: "Terms & Conditions" },
   { href: "/refund-policy", label: "Refund Policy" },
+  { href: "/cancellation-policy", label: "Cancellation Policy" },
 ];
 
 export default function Footer() {

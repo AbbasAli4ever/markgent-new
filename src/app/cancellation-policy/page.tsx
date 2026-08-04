@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import LegalDocument, { type LegalSection } from "@/components/legal/LegalDocument";
+import Nav from "@/components/sections/Nav";
+import Footer from "@/components/sections/Footer";
+import CookieBanner from "@/components/sections/CookieBanner";
+
+export const metadata: Metadata = { title: "Cancellation Policy | The Markgent LLC", description: "Terms for cancelling project-based and ongoing monthly services with The Markgent LLC, including notice periods and how to submit a request." };
+
+const sections: LegalSection[] = [
+  { id: "project-based", title: "Project-based services", content: <><p>At The Markgent LLC, we understand that business needs may change. This Cancellation Policy outlines the terms for cancelling our services.</p><p>Clients may request to cancel a project at any time by providing written notice via email.</p><ul className="list-disc space-y-2 pl-5"><li>If work has not yet started, the project may be cancelled without further obligation, subject to our <Link href="/refund-policy" className="font-semibold text-ink underline underline-offset-4">Refund Policy</Link>.</li><li>If work has already begun, the client will be responsible for payment for all work completed up to the cancellation date.</li></ul></> },
+  { id: "ongoing-monthly", title: "Ongoing monthly services", content: <><p>For recurring services such as:</p><ul className="list-disc space-y-2 pl-5"><li>Social Media Management</li><li>Amazon PPC Management</li><li>Customer Feedback Management</li><li>Other monthly marketing services</li></ul><p>Clients may cancel by providing at least <strong className="font-semibold text-ink">7 days&apos; written notice</strong> before the next billing cycle.</p><p>Cancellation will take effect at the end of the current billing period.</p></> },
+  { id: "client-delays", title: "Client delays", content: <><p>If a client fails to provide the required information, approvals, or materials for more than <strong className="font-semibold text-ink">30 consecutive days</strong>, The Markgent LLC reserves the right to pause or terminate the project.</p><p>Any work completed prior to termination remains billable.</p></> },
+  { id: "cancellation-by-us", title: "Cancellation by The Markgent LLC", content: <><p>We reserve the right to cancel or terminate services if:</p><ul className="list-disc space-y-2 pl-5"><li>Required payments are not received.</li><li>A client engages in abusive, fraudulent, or unlawful conduct.</li><li>The requested work violates applicable laws or marketplace policies.</li><li>A client repeatedly fails to provide necessary information to complete the project.</li></ul><p>If services are terminated by The Markgent LLC, any applicable refund will be determined in accordance with our <Link href="/refund-policy" className="font-semibold text-ink underline underline-offset-4">Refund Policy</Link>.</p></> },
+  { id: "contact", title: "Contact", content: <><p>For cancellation requests, please contact:</p><p><strong className="font-semibold text-ink">The Markgent LLC</strong><br />Email: <a className="font-semibold text-ink underline underline-offset-4" href="mailto:hello@themarkgent.com?subject=Cancellation%20request">hello@themarkgent.com</a></p><p>Please include your name, company name (if applicable), and project details to help us process your request promptly.</p></> },
+];
+
+export default function CancellationPolicyPage() { return <><Nav /><LegalDocument eyebrow="Legal" title="Cancellation Policy" summary="The terms for cancelling project-based and recurring services, including notice periods and what remains billable." sections={sections} /><Footer /><CookieBanner /></>; }
