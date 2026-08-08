@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   // { href: "/#testers", label: "Product Testers" },
   // { href: "/#why", label: "Why Us" },

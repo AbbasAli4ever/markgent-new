@@ -49,16 +49,16 @@ export default function Contact() {
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap xl:mt-9 xl:gap-3.5">
             <a
-              href="mailto:hello@themarkgent.com"
+              href="mailto:director@themarkgentllc.com"
               className="pointer-events-auto rounded-full bg-paper px-6 py-3.5 text-sm font-medium text-ink transition-colors hover:bg-white sm:px-8 sm:py-[17px] sm:text-base"
             >
               Book a Free Consultation
             </a>
             <a
-              href="mailto:hello@themarkgent.com"
+              href="mailto:director@themarkgentllc.com"
               className="pointer-events-auto break-all rounded-full border border-white/25 px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-white/10 sm:px-8 sm:py-[17px] sm:text-base"
             >
-              hello@themarkgent.com
+              director@themarkgentllc.com
             </a>
           </div>
 

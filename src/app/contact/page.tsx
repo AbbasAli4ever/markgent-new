@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_DETAILS = [
-  { label: "Business email", value: "hello@themarkgent.com", href: "mailto:hello@themarkgent.com", Icon: FiMail },
-  { label: "Phone", value: "Available by scheduled consultation", href: "mailto:hello@themarkgent.com?subject=Schedule%20a%20phone%20consultation", Icon: FiPhone },
+  { label: "Business email", value: "director@themarkgentllc.com", href: "mailto:director@themarkgentllc.com", Icon: FiMail },
+  { label: "Phone", value: "Available by scheduled consultation", href: "mailto:director@themarkgentllc.com?subject=Schedule%20a%20phone%20consultation", Icon: FiPhone },
   { label: "Business location", value: "United States — remote service business", Icon: FiMapPin },
   { label: "Business hours", value: "Inquiries accepted 24/7 · Response target within 24 hours", Icon: FiClock },
 ];
