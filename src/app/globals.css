@@ -62,6 +62,27 @@
 
   --animate-marquee: marquee 26s linear infinite;
   --animate-marquee-reverse: marquee-reverse 26s linear infinite;
+  --animate-wa-bump: wa-bump 2.2s ease-in-out infinite;
+
+  /* Bumpy idle motion for the floating WhatsApp button */
+  @keyframes wa-bump {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    28% {
+      transform: translateY(-6px) scale(1.06);
+    }
+    46% {
+      transform: translateY(0) scale(0.98);
+    }
+    62% {
+      transform: translateY(-2.5px) scale(1.02);
+    }
+    78% {
+      transform: translateY(0) scale(1);
+    }
+  }
 
   @keyframes marquee {
     from {
@@ -99,6 +120,16 @@ body {
 .line-reveal {
   transform-style: preserve-3d;
   will-change: transform, opacity, filter;
+}
+
+/* GSAP's `mask: "lines"` wraps each line in an `overflow: clip` box sized to
+   the line-height. With the tight leading used on headings (~1.08–1.22) that
+   box is shorter than the font's descenders, so glyphs like g, y, p, j and Q
+   were being sliced off at the baseline. Pad the mask to give descenders room
+   and pull the same amount back off the margin so line spacing is unchanged. */
+.line-reveal-mask {
+  padding-bottom: 0.18em !important;
+  margin-bottom: -0.18em !important;
 }
 
 h1,

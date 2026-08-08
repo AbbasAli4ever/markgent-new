@@ -1,12 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+// import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
 import TextReveal from "./TextReveal";
 
 const SOCIAL_LINKS = [
-  { label: "LinkedIn", href: "#top", Icon: FaLinkedinIn },
-  { label: "Instagram", href: "#top", Icon: FaInstagram },
-  { label: "Facebook", href: "#top", Icon: FaFacebookF },
+  // Instagram is the only active profile for now. Restore the others here
+  // once those accounts exist (also re-add their icon imports above).
+  // { label: "LinkedIn", href: "#top", Icon: FaLinkedinIn },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/themarkgentllc_",
+    Icon: FaInstagram,
+  },
+  // { label: "Facebook", href: "#top", Icon: FaFacebookF },
 ];
 
 const SERVICE_LINKS = [
@@ -56,14 +63,16 @@ export default function Footer() {
           </TextReveal>
           <div className="mt-5.5 flex gap-2.5">
             {SOCIAL_LINKS.map(({ label, href, Icon }) => (
-              <Link
+              <a
                 key={label}
                 href={href}
-                aria-label={label}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${label} — opens in a new tab`}
                 className="w-9 h-9 border border-white/28 rounded-[10px] flex items-center justify-center text-cream hover:bg-white/12 transition-colors"
               >
                 <Icon className="w-4 h-4" />
-              </Link>
+              </a>
             ))}
           </div>
         </div>

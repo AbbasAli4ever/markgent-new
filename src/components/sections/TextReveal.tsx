@@ -12,6 +12,8 @@ type TextRevealProps = {
   as?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div";
   className?: string;
   delay?: number;
+  /** Needed when another element references this text via aria-labelledby. */
+  id?: string;
 };
 
 export default function TextReveal({
@@ -19,6 +21,7 @@ export default function TextReveal({
   as = "h2",
   className,
   delay = 0,
+  id,
 }: TextRevealProps) {
   const ref = useRef<HTMLElement | null>(null);
 
@@ -70,6 +73,7 @@ export default function TextReveal({
   return (
     <Tag
       ref={ref as never}
+      id={id}
       className={className}
       style={{ perspective: 400 }}
     >
