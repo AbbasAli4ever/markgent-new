@@ -104,8 +104,18 @@
 }
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+/* Smooth scrolling is applied per interaction instead of globally. A blanket
+   `scroll-behavior: smooth` on <html> also animates the scroll-to-top that
+   Next.js performs on every route change, so opening a new page visibly
+   scrolled down instead of rendering from the top. SmoothAnchors adds this
+   class only while an in-page #anchor jump is in flight. */
+@media (prefers-reduced-motion: no-preference) {
+  html.smooth-scroll {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
