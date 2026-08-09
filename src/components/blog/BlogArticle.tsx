@@ -43,7 +43,7 @@ export default function BlogArticle({ post, relatedPosts }: BlogArticleProps) {
               const List = block.ordered ? "ol" : "ul";
               // Reveal each item's text via an inner span so the ul/ol/li
               // structure (and its markers) stay intact for screen readers.
-              return <List key={index} className={`my-7 grid gap-3 pl-6 text-[16px] leading-[1.75] text-body sm:text-[17px] ${block.ordered ? "list-decimal" : "list-disc marker:text-accent"}`}>{block.items.map((item, itemIndex) => <li key={item} className="pl-2"><TextReveal as="span" delay={itemIndex * 0.06} className="block">{item}</TextReveal></li>)}</List>;
+              return <List key={index} className={`my-7 grid gap-3 pl-6 text-[16px] leading-[1.75] text-body sm:text-[17px] ${block.ordered ? "list-decimal" : "list-disc marker:text-accent"}`}>{block.items.map((item, itemIndex) => <li key={item} className="pl-2">{item}</li>)}</List>;
             }
             if (block.type === "callout") return <aside key={index} className="my-10 rounded-[22px] border border-line-strong bg-cream-card px-6 py-7 sm:px-8"><div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-accent">{block.title}</div><TextReveal as="p" className="mt-3 text-[16px] leading-[1.75] text-ink sm:text-[17px]">{block.text}</TextReveal></aside>;
             return <figure key={index} className="my-12"><div className="relative aspect-[16/10] overflow-hidden rounded-[22px] bg-image-bg"><Image src={block.src} alt={block.alt} fill sizes="(max-width: 800px) 100vw, 736px" className="object-cover" /></div>{block.caption && <figcaption className="mt-3 text-center text-xs leading-5 text-muted">{block.caption}</figcaption>}</figure>;
