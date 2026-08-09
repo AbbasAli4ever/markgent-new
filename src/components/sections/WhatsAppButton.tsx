@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const PHONE_DISPLAY = "+92 329 7956905";
+const PHONE_DISPLAY = "+1 307 507 3828";
 // wa.me expects digits only, no plus sign or separators.
-const PHONE_E164 = "923297956905";
+const PHONE_E164 = "13075073828";
 const PREFILLED_MESSAGE =
   "Hello The Markgent LLC, I'd like to discuss growing my e-commerce brand.";
 
